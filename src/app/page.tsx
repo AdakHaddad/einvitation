@@ -46,15 +46,7 @@ const Home = () => {
             date={eventDetails.date}
             location={eventDetails.location}
           />
-          <MapEmbed
-            locationUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.5347409723718!2d107.57547870993425!3d-6.946069693025123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e8b408e44239%3A0xca2c3cf32c0bf70a!2sKantor%20Urusan%20Agama%20(KUA)%20Babakan%20Ciparay!5e0!3m2!1sen!2sid!4v1716275234654!5m2!1sen!2sid"
-            width="600"
-            height="450"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          />
+          <MapEmbed locationUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.5347409723718!2d107.57547870993425!3d-6.946069693025123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e8b408e44239%3A0xca2c3cf32c0bf70a!2sKantor%20Urusan%20Agama%20(KUA)%20Babakan%20Ciparay!5e0!3m2!1sen!2sid!4v1716275234654!5m2!1sen!2sid" />
           <GuestBookForm onSubmit={handleFormSubmit} />
           <Footer />
         </div>
