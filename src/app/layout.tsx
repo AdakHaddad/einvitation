@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SAMAWA - Invitation",
-  description: "Online Invitation for Your Special Day",
+  title: "Maulid Alamin",
+  description: "Majlis Anti Alafu, Berkah Tumbuh Bersama",
 };
 
 export default function RootLayout({
