@@ -10,7 +10,7 @@ import GuestBookForm from "../components/GuestBook";
 import Footer from "../components/Footer";
 import StickyButton from "@/components/StickyButton";
 
-const weddingDate = "2024-12-31T00:00:00";
+const weddingDate = "2024-05-26T19:20:00";
 
 const Home = () => {
   const [invitationOpened, setInvitationOpened] = useState(false);
@@ -27,8 +27,8 @@ const Home = () => {
       "https://static.vecteezy.com/system/resources/previews/011/307/183/original/crown-3d-illustration-rendering-png.png",
   };
   const eventDetails = {
-    date: "31 May 2024, 10:00 AM",
-    location: "Beautiful Wedding Venue, City, Country",
+    date: "Ahad 26 Mei 2024, Ba'da Isya",
+    location: "Kediaman Sayyid Muhsin Assegaf, Baciro, Yogyakarta",
   };
 
   const handleFormSubmit = (form: { name: string; message: string }) => {
@@ -67,17 +67,23 @@ const Home = () => {
       {!invitationOpened ? (
         <FirstPage onOpenInvitation={() => setInvitationOpened(true)} />
       ) : (
-        <div className="fade-in">
+        <div className="fade-in ">
+          <img
+            src="https://png.pngtree.com/png-vector/20230206/ourmid/pngtree-mosque-ramadan-kareem-islamic-frame-transparent-background-arabesuqe-style-png-image_6584837.png"
+            alt="Kubah"
+            className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          />
           <Countdown targetDate={weddingDate} />
+          <div className="text-center mt-20 ">
+            <h1 className="text-4xl font-bold ">Hadirilah Undangan</h1>
+            <h2 className="text-3xl font-semibold">Majelis Pembacaan Maulid</h2>
+          </div>
           <QuranVerse />
-          <BrideGroom groom={groom} bride={bride} />
           <EventDetails
             date={eventDetails.date}
             location={eventDetails.location}
           />
           <MapEmbed locationUrl="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d988.2457150548342!2d110.3842222!3d-7.7916389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNDcnMjkuOSJTIDExMMKwMjMnMDMuMiJF!5e0!3m2!1sen!2sid!4v1716669748743!5m2!1sen!2sid" />
-          <GuestBookForm onSubmit={handleFormSubmit} />
-          <Footer />
         </div>
       )}
       <StickyButton isMuted={isMuted} toggleMute={toggleMute} />

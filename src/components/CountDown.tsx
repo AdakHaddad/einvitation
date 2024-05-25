@@ -38,7 +38,7 @@ const Countdown: FC<CountdownProps> = ({ targetDate }) => {
   }, [targetDate]);
 
   return (
-    <div className="flex justify-center space-x-4 text-2xl">
+    <div className="flex justify-center space-x-2 text-2xl mt-20">
       {Object.keys(timeLeft).map((interval) => (
         <div key={interval} className="flex flex-col items-center">
           <span>{(timeLeft as any)[interval]}</span>
