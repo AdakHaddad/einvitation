@@ -5,23 +5,23 @@ interface CountdownProps {
 }
 
 interface TimeLeft {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
+  Hari: number;
+  Jam: number;
+  Menit: number;
+  Detik: number;
 }
 
 const Countdown: FC<CountdownProps> = ({ targetDate }) => {
   const calculateTimeLeft = (): TimeLeft => {
     const difference = +new Date(targetDate) - +new Date();
-    let timeLeft: TimeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    let timeLeft: TimeLeft = { Hari: 0, Jam: 0, Menit: 0, Detik: 0 };
 
     if (difference > 0) {
       timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
+        Hari: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        Jam: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        Menit: Math.floor((difference / 1000 / 60) % 60),
+        Detik: Math.floor((difference / 1000) % 60),
       };
     }
     return timeLeft;
@@ -38,7 +38,7 @@ const Countdown: FC<CountdownProps> = ({ targetDate }) => {
   }, [targetDate]);
 
   return (
-    <div className="flex justify-center space-x-2 text-2xl mt-20">
+    <div className="flex justify-center space-x-2 text-2xl lg:mt-20 mt-56">
       {Object.keys(timeLeft).map((interval) => (
         <div key={interval} className="flex flex-col items-center">
           <span>{(timeLeft as any)[interval]}</span>
