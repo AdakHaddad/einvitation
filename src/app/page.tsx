@@ -3,11 +3,9 @@ import { useState, useEffect } from "react";
 import FirstPage from "../components/first";
 import Countdown from "../components/CountDown";
 import QuranVerse from "../components/Quran";
-import BrideGroom from "../components/BrideGroom";
 import EventDetails from "../components/Event";
 import MapEmbed from "../components/MapEmbed";
-import GuestBookForm from "../components/GuestBook";
-import Footer from "../components/Footer";
+
 import StickyButton from "@/components/StickyButton";
 
 const weddingDate = "2024-05-26T19:20:00";
@@ -16,23 +14,9 @@ const Home = () => {
   const [invitationOpened, setInvitationOpened] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
 
-  const groom = {
-    name: "Sayyid",
-    photo:
-      "https://cdn3d.iconscout.com/3d/premium/thumb/crown-2997231-2516269.png",
-  };
-  const bride = {
-    name: "Sayyidah",
-    photo:
-      "https://static.vecteezy.com/system/resources/previews/011/307/183/original/crown-3d-illustration-rendering-png.png",
-  };
   const eventDetails = {
     date: "Ahad 26 Mei 2024, Ba'da Isya",
     location: "Kediaman Sayyid Muhsin Assegaf, Baciro, Yogyakarta",
-  };
-
-  const handleFormSubmit = (form: { name: string; message: string }) => {
-    console.log("Form submitted:", form);
   };
 
   const toggleMute = () => {
