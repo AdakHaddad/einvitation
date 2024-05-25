@@ -6,7 +6,7 @@ interface MapEmbedProps {
 
 const MapEmbed: FC<MapEmbedProps> = ({ locationUrl }) => {
   return (
-    <div className="my-8 mx-8">
+    <div className="my-8">
       <iframe
         src={locationUrl}
         width="100%"
