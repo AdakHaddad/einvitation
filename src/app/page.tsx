@@ -7,6 +7,7 @@ import EventDetails from "../components/Event";
 import MapEmbed from "../components/MapEmbed";
 
 import StickyButton from "@/components/StickyButton";
+import GuestBookForm from "@/components/GuestBook";
 
 const weddingDate = "2024-05-26T19:20:00";
 
@@ -16,7 +17,7 @@ const Home = () => {
 
   const eventDetails = {
     date: "Ahad 26 Mei 2024, Ba'da Isya",
-    location: "Kediaman Sayyid Muhsin Assegaf, Baciro, Yogyakarta",
+    location: "Kediaman As-Sayyid Muhsin Assegaf",
   };
 
   const toggleMute = () => {
@@ -41,6 +42,9 @@ const Home = () => {
     }
   }, [invitationOpened]);
 
+  const handleFormSubmit = (form: { name: string; message: string }) => {
+    console.log("Form submitted:", form);
+  };
   return (
     <>
       <audio id="background-audio" loop>
@@ -68,6 +72,7 @@ const Home = () => {
             location={eventDetails.location}
           />
           <MapEmbed locationUrl="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d988.2457150548342!2d110.3842222!3d-7.7916389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNDcnMjkuOSJTIDExMMKwMjMnMDMuMiJF!5e0!3m2!1sen!2sid!4v1716669748743!5m2!1sen!2sid" />
+          <GuestBookForm onSubmit={handleFormSubmit} />
         </div>
       )}
       <StickyButton isMuted={isMuted} toggleMute={toggleMute} />
